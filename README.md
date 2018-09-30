@@ -6,12 +6,9 @@
 </head>    
     
 <body>
-    
     <h1>Уроки программирования по PascalABC.Net и OpenGL (Tao Framework) </h1>
     <hr>
-    
     <p>Данная ветка github содержит все необходимы ресурсы для выполнение уроков продемонстрированных на канале <a href="https://www.youtube.com/user/TheMrDen3D">TheMrDen3D</a> в цикле уроков по <a href="https://www.youtube.com/watch?v=8l9sJ2d9lJM&list=PLaHMNOpHDYwoEfnxIRn93AOMTKej-JJ53">OpenGL </a>.</p>
-   
     <p>
         <b>Урок №0. Что такое OpenGL</b><br><br>
         <img src="res/l0.png" width="30%" height="30%">
@@ -68,8 +65,6 @@
         <b>Урок №13. Работа с несколькими объектами</b><br><br>
         <img src="res/l13.png" width="30%" height="30%">
     </p>
-    
-    
     <hr>
     Copyright 2018 TheMrDen3D, All Rights Reserved.
 </body>    
