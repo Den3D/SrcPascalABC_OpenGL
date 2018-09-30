@@ -1,4 +1,4 @@
-
+{::nomarkdown}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +10,7 @@
     <h1>Уроки программирования по PascalABC.Net и OpenGL (Tao Framework) </h1>
     <hr>
     
-    <p>Данная ветка github содержит все необходимы ресурсы для при выполнение уроков продемонстрированных на канале <a href="https://www.youtube.com/user/TheMrDen3D">TheMrDen3D</a> в цикле уроков по <a href="https://www.youtube.com/watch?v=8l9sJ2d9lJM&list=PLaHMNOpHDYwoEfnxIRn93AOMTKej-JJ53">OpenGL </a>.</p>
+    <p>Данная ветка github содержит все необходимы ресурсы для выполнение уроков продемонстрированных на канале <a href="https://www.youtube.com/user/TheMrDen3D">TheMrDen3D</a> в цикле уроков по <a href="https://www.youtube.com/watch?v=8l9sJ2d9lJM&list=PLaHMNOpHDYwoEfnxIRn93AOMTKej-JJ53">OpenGL </a>.</p>
    
     <p>
         <b>Урок №0. Что такое OpenGL</b><br><br>
@@ -75,3 +75,4 @@
 </body>    
 
 </html>
+{:/}
