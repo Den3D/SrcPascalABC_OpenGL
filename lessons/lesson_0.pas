@@ -1,11 +1,9 @@
  {$reference Tao.FreeGlut.dll}
  {$reference Tao.OpenGl.dll}
-
    
  uses
    System, System.Collections.Generic, System.Linq, System.Text, 
    Tao.OpenGl, Tao.FreeGlut;
-
 
  procedure init_graphics;
  begin
@@ -22,7 +20,6 @@
 
  end;
 
- 
  begin
    Glut.glutInit();
    Glut.glutInitWindowSize(500, 500);
