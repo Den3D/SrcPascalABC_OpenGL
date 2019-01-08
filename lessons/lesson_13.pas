@@ -116,8 +116,6 @@ begin
     GLUT.glutSolidCube(1.0);
     GL.glPopMatrix();
     
-
-
 end;
   
 //****************************************************// 

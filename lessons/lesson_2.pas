@@ -8,7 +8,6 @@ uses
 var
   r : single;
  
-
 // Инициализация ресурсов приложения и OpenGL
  procedure InitScene();
  begin
@@ -30,7 +29,6 @@ var
  // Glut.glutPostRedisplay();
  end;
  
- 
  procedure Timer (val : integer);
  begin
   Glut.glutPostRedisplay();
@@ -43,7 +41,7 @@ var
  begin
  end;
 
- 
+ //--------------------------------------------------------
  begin
   Glut.glutInit(); 
   Glut.glutInitWindowSize(400, 300);

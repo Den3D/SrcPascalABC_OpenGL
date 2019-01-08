@@ -24,8 +24,7 @@ begin
  // gl.glDepthFunc(gl.GL_LEQUAL);
  // gl.glDepthRange(0.0, 1.0);
  // gl.glDepthMask(gl.GL_TRUE);
- // gl.glClearDepth(1.0);
-  
+ // gl.glClearDepth(1.0); 
 end;
 
 //****************************************************// 

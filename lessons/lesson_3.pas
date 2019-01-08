@@ -8,7 +8,6 @@ uses
 var
   r : single;
  
-
 // Инициализация ресурсов приложения и OpenGL
  procedure InitScene();
  begin
@@ -23,8 +22,7 @@ var
   GL.glClear(GL.GL_COLOR_BUFFER_BIT);
   GL.glPointSize(3.0);
   GL.glLineWidth(3.0);
- 
- 
+  
   GL.glBegin(GL.GL_LINE_LOOP);
     GL.glColor3f(1.0,0.0,0.0);
     GL.glVertex2f(-0.5, 0.5);    
@@ -52,7 +50,7 @@ var
  begin
  end;
 
- 
+ //---------------------------------------------------------------------
  begin
   Glut.glutInit(); 
   Glut.glutInitWindowSize(400, 300);

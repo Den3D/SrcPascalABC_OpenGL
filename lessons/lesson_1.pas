@@ -6,25 +6,25 @@ uses
    Tao.OpenGl, Tao.FreeGlut;
 
 // Инициализация ресурсов приложения и OpenGL
- procedure InitScene;
- begin
+procedure InitScene;
+begin
   Writeln( GL.glGetString(GL.GL_VERSION));
- end;
+end;
 
 // Процедура отрисовки
 // Данная процедура вызывается каждый кадр
- procedure RenderScene();
- begin
- end;
+procedure RenderScene();
+begin
+end;
 
 // Процедура перенастройки
 // Данная процедура вызывается при изменении размера экрана
  procedure Reshape( w, h:integer);
- begin
- end;
+begin
+end;
 
  
- begin
+begin
   Glut.glutInit(); 
   Glut.glutInitWindowSize(400, 300);
   Glut.glutInitWindowPosition(300, 200); 
@@ -35,4 +35,4 @@ uses
   
   InitScene();
   Glut.glutMainLoop();
- end.
+end.

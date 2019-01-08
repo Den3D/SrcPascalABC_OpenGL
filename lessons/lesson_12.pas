@@ -110,9 +110,7 @@ begin
   //glut.glutSolidCube(5.0);
   //glut.glutwireSphere(2.0, 12, 12); 
   glut.glutwireTeapot(3.0);
-  
-  
-  
+   
   r := r + 1.0;
   
   Glut.glutSwapBuffers;

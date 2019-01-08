@@ -39,11 +39,8 @@ begin
   GL.glBegin(GL.GL_TRIANGLES);
      gl.glVertex3f( 0.0, 1.5,  -10.0);
      gl.glVertex3f( 0.0,  0.0,   -10.0);
-     gl.glVertex3f( 1.0, 0.0,  -10.0);
-     
-    
+     gl.glVertex3f( 1.0, 0.0,  -10.0);   
   GL.glEnd();
-  
   
   Glut.glutSwapBuffers;
 end;

@@ -70,7 +70,6 @@ begin
 
 end;
 
-
 begin
   Glut.glutInit(); 
   Glut.glutInitWindowSize(400, 300);

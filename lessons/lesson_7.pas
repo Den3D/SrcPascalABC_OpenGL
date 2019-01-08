@@ -43,8 +43,7 @@ begin
      
     
   GL.glEnd();
-  
-  
+   
   Glut.glutSwapBuffers;
 end;
 

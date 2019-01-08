@@ -35,8 +35,6 @@ const
 const
   Width = 600;
   Height = 600;
- 
- 
   
 var  
   step : integer := 20;

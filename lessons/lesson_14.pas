@@ -12,8 +12,6 @@ const
   Key_D = 100;
   Key_ESC = 27;
  
-
-
 const
   Width = 600;
   Height = 480;

@@ -34,8 +34,7 @@ begin
   
     GL.glColor3f(0.0, 0.0, 1.0);
     GL.glVertex2f( 0.2, -0.5);
-  
-  
+    
     GL.glColor3f(0.0, 0.0, 1.0);
     GL.glVertex2f( 0.9, 0.9);
   GL.glEnd();
@@ -62,7 +61,7 @@ begin
 
 end;
 
-
+//--------------------------------------------------------
 begin
   Glut.glutInit(); 
   Glut.glutInitWindowSize(400, 300);
