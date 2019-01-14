@@ -9,17 +9,14 @@
     <h1>Уроки программирования на PascalABC.Net и OpenGL (Tao Framework) </h1>
     <hr>
     <p>Данная ветка github содержит все необходимы ресурсы для выполнение уроков продемонстрированных на канале <a href="https://www.youtube.com/user/TheMrDen3D">TheMrDen3D</a> в цикле уроков по <a href="https://www.youtube.com/watch?v=8l9sJ2d9lJM&list=PLaHMNOpHDYwoEfnxIRn93AOMTKej-JJ53">OpenGL </a>.</p>
-    <div style="float: left">
-        <p><b>Урок №0. Что такое OpenGL</b><br><br>
+    <p>
+        <b>Урок №0. Что такое OpenGL</b><br><br>
         <img src="res/l0.png" width="30%" height="30%">
-        </p>
-    </div><div style="float: right">
-        <p><b>Урок №1. Как узнать версию OpenGL</b><br><br>
+    </p>
+    <p>
+        <b>Урок №1. Как узнать версию OpenGL</b><br><br>
         <img src="res/l1.png" width="30%" height="30%">
-        </p>
-    </div>
-        
-
+    </p>    
     <p>
         <b>Урок №2. Меняющийся цвет заднего фона</b><br><br>
         <img src="res/l2.png" width="30%" height="30%">
@@ -68,8 +65,19 @@
         <b>Урок №13. Работа с несколькими объектами</b><br><br>
         <img src="res/l13.png" width="30%" height="30%">
     </p>
+    <p>
+        <b>Урок №14. Работа с клавиатурой</b><br><br>
+        <img src="res/l14.png" width="30%" height="30%">
+    </p>
+    <p>
+        <b>Урок №15. Игра "Snake2D"</b><br><br>
+        <img src="res/l15.png" width="30%" height="30%">
+    </p>
+    <p>
+        <b>Урок №16. Полноэкранный режим. Fullscreen.</b><br><br>
+        <img src="res/l16.png" width="30%" height="30%">
+    </p>    
     <hr>
     Copyright 2018 TheMrDen3D, All Rights Reserved.
 </body>    
-
 </html>
