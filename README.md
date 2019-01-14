@@ -6,9 +6,14 @@
 </head>    
     
 <body>
-    <h1>Уроки программирования по PascalABC.Net и OpenGL (Tao Framework) </h1>
+    <h1>Уроки программирования на PascalABC.Net и OpenGL (Tao Framework) </h1>
     <hr>
     <p>Данная ветка github содержит все необходимы ресурсы для выполнение уроков продемонстрированных на канале <a href="https://www.youtube.com/user/TheMrDen3D">TheMrDen3D</a> в цикле уроков по <a href="https://www.youtube.com/watch?v=8l9sJ2d9lJM&list=PLaHMNOpHDYwoEfnxIRn93AOMTKej-JJ53">OpenGL </a>.</p>
+    <table width="100%" cellspacing="0" cellpadding="5">
+    <tr> 
+        <td width="200" valign="top">Левая колонка</td><td valign="top">Правая колонка</td>
+    </tr>
+    </table>    
     <p>
         <b>Урок №0. Что такое OpenGL</b><br><br>
         <img src="res/l0.png" width="30%" height="30%">
