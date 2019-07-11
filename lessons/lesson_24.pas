@@ -1,0 +1,300 @@
+﻿{$reference Tao.FreeGlut.dll}
+{$reference Tao.OpenGl.dll}
+{$reference System.Drawing.dll}
+
+uses
+   System, System.Collections.Generic, System.Linq, System.Text, 
+   Tao.OpenGl, Tao.FreeGlut,
+   System.Drawing, System.Drawing.Imaging;
+
+const
+  Key_W = 119; 
+  Key_S = 115;
+  Key_A = 97;
+  Key_D = 100;
+  Key_Z = 122;
+  Key_X = 120;
+ 
+ 
+  Key_ESC = 27;
+
+const
+  Width = 600;
+  Height = 480;
+
+var
+  posX : single  := 0.0;
+  posY : single  := 0.0;
+  posZ : single  := 10.0;
+  rotY : single  := 0.0;
+  
+  Texture : integer;
+  Texture2 : integer;
+  
+//****************************************************// 
+//*******      Процедура создания куба      **********//
+//****************************************************// 
+procedure DrawCube();
+begin
+  // front
+  GL.glColor3f(1.0, 0.0, 0.0);
+  GL.glBegin(GL.GL_QUADS);
+    gl.glVertex3f( -2.0,  2.0,  2.0); // 1
+    gl.glVertex3f( -2.0, -2.0,  2.0); // 2 
+    gl.glVertex3f(  2.0, -2.0,  2.0); // 3
+    gl.glVertex3f(  2.0,  2.0,  2.0); // 4
+  GL.glEnd();
+ 
+  // back
+  GL.glColor3f(0.0, 1.0, 0.0);
+  GL.glBegin(GL.GL_QUADS);
+    gl.glVertex3f( -2.0,  2.0, -2.0); // 5
+    gl.glVertex3f( -2.0, -2.0, -2.0); // 6
+    gl.glVertex3f(  2.0, -2.0, -2.0); // 7
+    gl.glVertex3f(  2.0,  2.0, -2.0); // 8
+  GL.glEnd();
+  
+  // left
+  GL.glColor3f(0.0, 0.0, 1.0);
+  GL.glBegin(GL.GL_QUADS);
+    gl.glVertex3f( -2.0,  2.0, -2.0); // 5
+    gl.glVertex3f( -2.0, -2.0, -2.0); // 6
+    gl.glVertex3f( -2.0, -2.0,  2.0); // 2 
+    gl.glVertex3f( -2.0,  2.0,  2.0); // 1
+  GL.glEnd();
+  
+  // right
+  GL.glColor3f(1.0, 1.0, 0.0);
+  GL.glBegin(GL.GL_QUADS);
+    gl.glVertex3f(  2.0, -2.0, -2.0); // 7
+    gl.glVertex3f(  2.0,  2.0, -2.0); // 8
+    gl.glVertex3f(  2.0,  2.0,  2.0); // 4    
+    gl.glVertex3f(  2.0, -2.0,  2.0); // 3
+  GL.glEnd();
+   
+  // top
+  GL.glColor3f(1.0, 0.0, 1.0);
+  GL.glBegin(GL.GL_QUADS);
+    gl.glVertex3f( -2.0,  2.0,  2.0); // 1
+    gl.glVertex3f(  2.0,  2.0,  2.0); // 4    
+    gl.glVertex3f(  2.0,  2.0, -2.0); // 8
+    gl.glVertex3f( -2.0,  2.0, -2.0); // 5
+  GL.glEnd();
+
+  // down
+  GL.glColor3f(0.5, 0.0, 0.5);
+  GL.glBegin(GL.GL_QUADS);
+    gl.glVertex3f(  2.0, -2.0,  2.0); // 3
+    gl.glVertex3f( -2.0, -2.0,  2.0); // 2  
+    gl.glVertex3f( -2.0, -2.0, -2.0); // 6
+    gl.glVertex3f(  2.0, -2.0, -2.0); // 7
+  GL.glEnd();
+end;
+
+procedure MYQUAD( Tex : integer);
+begin
+  Gl.glBindTexture(Gl.GL_TEXTURE_2D, Tex);
+  GL.glBegin(GL.GL_QUADS);
+  Gl.glTexCoord2f(0, 0);  gl.glVertex3f( -2.0,  2.0,  0.0); // 1
+  Gl.glTexCoord2f(0, 1);  gl.glVertex3f( -2.0, -2.0,  0.0); // 2 
+  Gl.glTexCoord2f(1, 1);  gl.glVertex3f(  2.0, -2.0,  0.0); // 3
+  Gl.glTexCoord2f(1, 0);  gl.glVertex3f(  2.0,  2.0,  0.0); // 4
+  GL.glEnd();
+end;
+
+procedure MYQUAD2( Tex : integer);
+begin
+  Gl.glBindTexture(Gl.GL_TEXTURE_2D, Tex);
+  GL.glBegin(GL.GL_QUADS);
+  Gl.glTexCoord2f(0, 0);  gl.glVertex3f( -2.0,  2.0,  0.0); // 1
+  Gl.glTexCoord2f(0, 2.5);  gl.glVertex3f( -2.0, -2.0,  0.0); // 2 
+  Gl.glTexCoord2f(2.5, 2.5);  gl.glVertex3f(  2.0, -2.0,  0.0); // 3
+  Gl.glTexCoord2f(2.5, 0);  gl.glVertex3f(  2.0,  2.0,  0.0); // 4
+  GL.glEnd();
+end;
+
+
+procedure MYTRIANGLE( Tex : integer);
+begin
+  Gl.glBindTexture(Gl.GL_TEXTURE_2D, Tex);
+  GL.glBegin(GL.GL_TRIANGLES);
+  Gl.glTexCoord2f(0.5, 1);  gl.glVertex3f(  0.0,  2.0,  0.0); // 1
+  Gl.glTexCoord2f(0, 0);  gl.glVertex3f( -2.0, -2.0,  0.0); // 2 
+  Gl.glTexCoord2f(1, 0);  gl.glVertex3f(  2.0, -2.0,  0.0); // 3
+  GL.glEnd();
+end;
+
+//****************************************************// 
+//********         Загрузка текстуры        **********//
+//****************************************************//
+// BMP, GIF, EXIG, JPG, PNG и TIFF
+function LoadTextere (filename : string)  : integer;
+var 
+ texID : integer; 
+begin
+ var img : Bitmap := new Bitmap (filename);
+ var rect : Rectangle := new Rectangle(0, 0, img.Width, img.Height);
+ var img_data : BitmapData := img.LockBits (rect,ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+ 
+ Gl.glGenTextures( 1, texID); 
+ WriteLn( texID );
+  
+ Gl.glBindTexture(Gl.GL_TEXTURE_2D, texID);
+ 
+ Gl.glTexParameteri( Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_WRAP_S, Gl.GL_CLAMP);
+ Gl.glTexParameteri( Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_WRAP_T, Gl.GL_CLAMP);
+ 
+ var nMaxAnisotropy : integer := 0;
+ Gl.glGetIntegerv(Gl.GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT,nMaxAnisotropy); 
+ WriteLn('Max ANISOTROPY:', nMaxAnisotropy);
+ 
+ if (nMaxAnisotropy > 0) then
+   Gl.glTexParameteri( Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_MAX_ANISOTROPY_EXT, nMaxAnisotropy);
+ 
+ 
+  Gl.glTexParameteri( Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_MIN_FILTER, Gl.GL_LINEAR_MIPMAP_LINEAR);
+  Gl.glTexParameteri( Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_MAG_FILTER, Gl.GL_LINEAR);
+ 
+  Gl.glTexImage2D(Gl.GL_TEXTURE_2D, 0, Gl.GL_RGBA, img_data.Width, img_data.Height, 0, Gl.GL_BGRA,Gl.GL_UNSIGNED_BYTE, img_data.Scan0);
+  Gl.glGenerateMipmapEXT(Gl.GL_TEXTURE_2D);
+ 
+  //Glu.gluBuild2DMipmaps (Gl.GL_TEXTURE_2D, Gl.GL_RGBA, img_data.Width, img_data.Height, Gl.GL_BGRA, Gl.GL_UNSIGNED_BYTE, img_data.Scan0);
+
+  img.UnlockBits(img_data);
+ 
+ Result := texID;
+end;
+ 
+//****************************************************// 
+//***  Инициализация ресурсов приложения и OpenGL  ***//
+//****************************************************// 
+procedure InitScene();
+begin  
+  Writeln( GL.glGetString(GL.GL_VERSION));
+  GL.glClearColor(0.0, 0.0, 0.0, 0.0); 
+  
+  gl.glEnable(gl.GL_DEPTH_TEST);
+  
+ // Gl.glEnable( Gl.GL_TEXTURE_2D );
+  
+  Gl.glEnable( Gl.GL_ALPHA_TEST);
+  Gl.glAlphaFunc( Gl.GL_GREATER, 0.0 );
+  
+  Gl.glEnable ( Gl.GL_BLEND );
+  Gl.glBlendFunc( Gl.GL_SRC_ALPHA, Gl.GL_ONE_MINUS_SRC_ALPHA );
+  Gl.glBlendEquation( Gl.GL_FUNC_ADD );
+  
+  
+ // Gl.glEnable(Gl.GL_CULL_FACE);
+ // Gl.glCullFace(Gl.GL_BACK); 
+ // Gl.glFrontFace(Gl.GL_CW);
+  
+ // Gl.glPolygonMode(Gl.GL_FRONT, Gl.GL_LINE);
+ 
+// img := new Bitmap (Image.FromFile('data\tex2.bmp'));
+ 
+ Texture :=  LoadTextere ('data\a2.png');
+ Texture2 :=  LoadTextere ('data\tex1.jpg');
+ 
+end;
+
+//****************************************************// 
+//***   Процедура отрисовки                        ***//
+//***   Данная процедура вызывается каждый кадр    ***//
+//****************************************************// 
+procedure RenderScene();
+var 
+ i , j : integer;
+begin
+ GL.glLoadIdentity();
+ Glu.gluLookAt( posX, posY, posZ,
+                posX, posY, posZ - 3.0,
+                0.0, 1.0, 0.0);  
+
+  GL.glClear(GL.GL_COLOR_BUFFER_BIT or GL.GL_DEPTH_BUFFER_BIT);
+
+ for  i := -10 to 10 do 
+  for j := -10 to 10 do begin
+   Gl.glPushMatrix(); 
+    Gl.glTranslatef( 1.0 * i, -1.5, 1.0 * j );
+    Gl.glColor3f( 0.1 * i, 0.3, 0.1 * j );
+    Glut.glutSolidCube(0.5);
+   Gl.glPopMatrix(); 
+  end;
+  
+  Gl.glPushMatrix(); 
+   Gl.glTranslatef( 0.0, -1.5, 0.0 );
+   Gl.glColor3f( 0.9, 0.3, 0.7);
+   Glut.glutSolidTeapot(1.0);
+  Gl.glPopMatrix();
+
+ 
+
+ Glut.glutSwapBuffers;
+end;
+
+//****************************************************// 
+//*** Процедура таймер.                            ***//
+//*** Вызывается каждые 40 мсек для отрисовка кадра **//
+//****************************************************// 
+procedure Timer(val: integer);
+begin
+  Glut.glutPostRedisplay();
+  Glut.glutTimerFunc(40, Timer, 0);
+end;
+
+//****************************************************// 
+//***  Процедура перенастройки                     ***//
+//***  Проц. вызыв. при изменении размера экрана   ***//
+//****************************************************//
+procedure Reshape(w, h: integer);
+begin
+
+ gl.glViewport(0,0, w, h);
+ gl.glMatrixMode(gl.GL_PROJECTION);
+ gl.glLoadIdentity();
+ 
+ glu.gluPerspective(45, w/h, 0.1, 10000.0);
+
+ gl.glMatrixMode(gl.GL_MODELVIEW);
+ gl.glLoadIdentity();
+
+end;
+
+procedure pressKey ( key : byte; x, y : integer );
+begin
+ case key of
+  Key_W  : posZ := posZ - 1.0;   
+  Key_S  : posZ := posZ + 1.0;  
+  Key_A  : posX := posX - 1.0;   
+  Key_D  : posX := posX + 1.0;  
+  Key_Z  : posY := posY + 1.0;
+  Key_X  : posY := posY - 1.0;
+  
+  Key_ESC : glut.glutLeaveMainLoop(); 
+  else writeln( key );
+ end; 
+end;
+
+
+begin
+  Glut.glutInit(); 
+  Glut.glutInitWindowSize(Width, Height);
+  Glut.glutInitWindowPosition(300, 200); 
+  Glut.glutInitDisplayMode(GLUT.GLUT_RGBA or Glut.GLUT_DOUBLE or GLUT.GLUT_DEPTH);
+  Glut.glutCreateWindow('Tao Example');  
+ 
+  //Glut.glutGameModeString(':32'); 
+  //if ( Glut.glutGameModeGet( Glut.GLUT_GAME_MODE_POSSIBLE) <> 0 )
+  // then Glut.glutEnterGameMode()
+  // else Glut.glutLeaveGameMode();
+  
+  Glut.glutDisplayFunc(RenderScene);
+  Glut.glutReshapeFunc(Reshape);
+  Glut.glutTimerFunc(40, Timer, 0);
+  
+  glut.glutKeyboardFunc ( pressKey );
+  
+  InitScene();
+  Glut.glutMainLoop();
+end.
