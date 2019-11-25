@@ -12,7 +12,7 @@
 |[![image](res/l8s.png "Урок №8. Дальность видимости")](res/l8.png)|[![image](res/l9s.png "Урок №9. Настройка камеры")](res/l9.png) |
 |[![image](res/l10s.png "Урок №10. Перемещение, вращение и масштабирование объекта")](res/l10.png)|[![image](res/l11s.png "Урок №11. Анимация объекта")](res/l11.png) |
 |[![image](res/l12s.png "Урок №12. Объемные модели")](res/l12.png)|[![image](res/l13s.png "Урок №13. Работа с несколькими объектами")](res/l13.png) |
-|[![image](res/l14s.png "Урок №14. Работа с клавиатурой")](res/l14.png)|[![image](res/l15s.png "Урок №15. Игра "Snake2D")](res/l15.png) |
+|[![image](res/l14s.png "Урок №14. Работа с клавиатурой")](res/l14.png)|[![image](res/l15s.png "Урок №15. Игра Snake2D")](res/l15.png) |
 
 
 
