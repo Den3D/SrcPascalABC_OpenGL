@@ -5,7 +5,7 @@
 
 |  |  |
 |----:|:----------|
-|[![image](res/l1s.png "Урок №0. Что такое OpenGL")](res/l0.png)|[![image](res/l1s.png "Урок №1. Как узнать версию OpenGL")](res/l1.png)|
+|[![image](res/l1s.png "Урок №0. Что такое OpenGL")](lessons/lesson_0.pas)|[![image](res/l1s.png "Урок №1. Как узнать версию OpenGL")](res/l1.png)|
 |[![image](res/l2s.png "Урок №2. Меняющийся цвет заднего фона")](res/l2.png) | [![image](res/l3s.png "Урок №3. Создание первого примитива")](res/l3.png)|
 |[![image](res/l4s.png "Урок №4. Треугольники и квадраты")](res/l4.png)|[![image](res/l5s.png "Урок №5. Двойная буферизация")](res/l5.png) |
 |[![image](res/l6s.png "Урок №6. Z-буфер или буфер глубины")](res/l6.png)|[![image](res/l7s.png "Урок №7. Матрицы. Настройка перспективы")](res/l7.png) |
