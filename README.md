@@ -18,7 +18,7 @@
 |[![image](res/l20s.png "Урок №20. Наложение текстур")](lessons/lesson_20.pas)|[![image](res/l21s.png "Урок №21. Загрузка фрагмента текстуры")](lessons/lesson_21.pas) |
 |[![image](res/l22s.png "Урок №22. Фильтрация текстур")](lessons/lesson_22.pas)|[![image](res/l23s.png "Урок №23. Прозрачность текстур")](lessons/lesson_23.pas) |
 |[![image](res/l24s.png "Урок №24. Простоя камера перемещения")](lessons/lesson_24.pas)|[![image](res/l25s.png "Урок №25. Камера ver. 2.0")](lessons/lesson_25.pas) |
-|[![image](res/l26s.png "Урок №26. Камера ver.2.5 Управление мышкой")](lessons/lesson_26.pas)|[![image](res/l27s.png "Урок №27. Игра Doodle Jump)](lessons/lesson_27.pas) |
+|[![image](res/l26s.png "Урок №26. Камера ver.2.5 Управление мышкой")](lessons/lesson_26.pas)|[![image](res/l27s.png "Урок №27. Игра Doodle Jump")](lessons/lesson_27.pas) |
 |[![image](res/l28s.png "Урок №28. Построение 3D графиков")](lessons/lesson_28.pas)|[![image](res/l29s.png "Урок №29. Создание Terrain")](lessons/lesson_29.pas) |
 |[![image](res/l30s.png "Урок №30. Terrain из редактора")](lessons/lesson_30.pas)|[![image](res/l31s.png "Урок №31. Создание SkyBox")](lessons/lesson_31.pas) |
 |[![image](res/l32s.png "Урок №32. Создание реки")](lessons/lesson_32.pas)|[![image](res/l33s.png "Урок №33. Создание тумана")](lessons/lesson_33.pas) |
