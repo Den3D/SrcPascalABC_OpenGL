@@ -640,16 +640,16 @@ begin
  // Texture := LoadTextere('data\a2.png');
  // Texture2 := LoadTextere('data\tex1.jpg');
   
-  Texture3 := LoadTextere('data\terrain\terEditor2\cmap.png');
+  Texture3 := LoadTextere('data\terrain\terEditor\cmap.png');
   
   
-  LoadHeightMap('data\terrain\terEditor2\hmap.png',HeightMap);
+  LoadHeightMap('data\terrain\terEditor\hmap.png',HeightMap);
   //LoadRawFile('data\terrain\terUnity\terrain.raw',HeightMap);
   
   
   // Создание камеры и задание первоначальных значений
   Cam := new Camera(Width, Height, 300, 200);
-  Cam.Position_Camera(0.0, 0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+  Cam.Position_Camera(20.0, 100.0, 20.0, 50.0, 0.0, 50.0, 0.0, 1.0, 0.0);
 end;
 
 

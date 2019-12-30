@@ -21,7 +21,7 @@ const
 var
   posX : single  := 0.0;
   posY : single  := 0.0;
-  posZ : single  := 0.0;
+  posZ : single  := -5.0;
   
   Texture : integer;
   Texture2 : integer;

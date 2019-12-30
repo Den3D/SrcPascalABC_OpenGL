@@ -21,7 +21,7 @@ const
 var
   posX : single  := 0.0;
   posY : single  := 0.0;
-  posZ : single  := 0.0;
+  posZ : single  := -100.0;
   
   img : Bitmap;
   col : Color;
@@ -112,6 +112,7 @@ begin
  // Gl.glEnable(Gl.GL_CULL_FACE);
  // Gl.glCullFace(Gl.GL_BACK); 
  // Gl.glFrontFace(Gl.GL_CW);
+  
  // Gl.glPolygonMode(Gl.GL_FRONT, Gl.GL_LINE);
  
  img := new Bitmap (Image.FromFile('data\tex2.bmp'));
